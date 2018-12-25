@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30" status="warn">
+	<Appenders>
+		<!-- <File name="FILE" fileName="/Users/ptero/logs/Credit_real.log" append="true"> 
+			<PatternLayout pattern="Credit_real [%d] %-5p [%l] %m%n" /> </File> -->
+		<RollingFile name="ROLLINGFILE"
+			fileName="/Users/ptero/logs/CloudCheck.log"
+			filePattern="/Users/ptero/logs/$${date:yyyy-MM}/app-%d{yyyy-MM-dd}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>CloudCheck [%d] %-5p [%l] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10 MB" />
+			</Policies>
+		</RollingFile>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="CloudCheck [%d] %-5p [%l] %m%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="debug">
+			<AppenderRef ref="CONSOLE" level="info" />
+			<AppenderRef ref="ROLLINGFILE" level="error" />
+		</Root>
+	</Loggers>
+</Configuration>
