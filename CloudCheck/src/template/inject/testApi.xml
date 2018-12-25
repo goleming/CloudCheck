@@ -20,7 +20,7 @@
 			<field name="friendAddress" nullAble="false" type="value"
 				pattern="" defaultValue="江苏省南京市建邺区" comment="朋友家庭住址" />
 			<field name="friendId" nullAble="false" type="value" pattern=""
-				defaultValue="3412341241214" comment="朋友证件号码" />
+				defaultValue="8787676567" comment="朋友证件号码" />
 		</field>
 	</fields>
 </api_config>
