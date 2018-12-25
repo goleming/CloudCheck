@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api_config channelId="channel_1" name="testApi">
+	<fields>
+		<!-- single key-value,pattern为正则表达式 -->
+		<field name="userName" nullAble="false" type="value" pattern=""
+			defaultValue="张三" comment="用户名" />
+		<!-- JsonObject配置 -->
+		<field name="basicInfo" nullAble="false" type="JsonObject"
+			pattern="" defaultValue="" comment="个人基本信息">
+			<field name="address" nullAble="false" type="value" pattern=""
+				defaultValue="江苏省南京市建邺区" comment="家庭住址" />
+			<field name="areaCode" nullAble="false" type="value" pattern=""
+				defaultValue="210001" comment="邮政编码" />
+		</field>
+		<!-- JsonArray配置 -->
+		<field name="friendlist" nullAble="false" type="JsonArray"
+			comment="朋友列表">
+			<field name="friendName" nullAble="false" type="value"
+				pattern="" defaultValue="李磊" comment="朋友姓名" />
+			<field name="friendAddress" nullAble="false" type="value"
+				pattern="" defaultValue="江苏省南京市建邺区" comment="朋友家庭住址" />
+			<field name="friendId" nullAble="false" type="value" pattern=""
+				defaultValue="3412341241214" comment="朋友证件号码" />
+		</field>
+	</fields>
+</api_config>
